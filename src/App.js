@@ -1,19 +1,7 @@
 import HomePage from "./pages/homepage/homepage.component";
 import './App.css';
-import {Routes, Route, useParams, Link, useNavigate} from "react-router-dom";
-
-const HatsPAge = (props) => {
-    const navigate = useNavigate();
-    console.log(props)
-    const { id } = useParams();
-    return (
-    <div>
-        <Link to='/'>go home</Link>
-        <button onClick={()=> navigate('/')}>ddddd</button>
-        <h1>Hats Page {id}</h1>
-    </div>
-
-    )};
+import {Routes, Route} from "react-router-dom";
+import ShopPage from "./pages/shop/shop.component";
 
 function App() {
 
@@ -23,7 +11,8 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/hats" element={<HatsPAge />} />
+                <Route path="/shop" element={<ShopPage />} />
+
             </Routes>
 
         </div>
